@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+   
+    <title>Calculadora IMC</title>
+
+
+    <script>
+
+        function calcular(){
+         var peso = document.getElementById("num_1").value;
+         var altura = document.getElementById("num_2").value;
+
+         var div = document.getElementById("resp");
+
+         var imc = (peso / (altura * altura)).toFixed(2);
+         div.innerHTML = `<h2> Seu IMC é: ${imc} </h2>`;
+         div.style.display = "block";
+         }
+    </script>
+
+    <style>
+        body{
+            background-image: url(img/bg.jpg);
+            font-family: 'Cardo', serif;
+        }
+
+        h1{
+            text-align: center;
+            margin-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        #resp{
+            display: none;
+            padding: 2px;
+            margin: 0 auto;
+            background-color: rgb(196, 104, 182);
+            width: max-content;
+            border-radius: 5px;
+            color: #000;
+            font-size: 18px;
+        }
+
+        #container{
+            font-family: 'Lato', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            text-align: center;
+            border-radius: 25px;
+            margin: auto;
+            margin-top: 40px;
+            width: 440px;
+            height: 350px;
+            padding-top: 45px ;
+            background-color: rgb(218, 160, 230);
+        }
+
+        #container label{
+
+            font-size: 28px;
+            color: #000000;
+        }
+
+        input{
+            width: 190px;
+            height: 20px;
+            margin: 0 auto;
+            border-radius: 25px;
+        }
+
+        .botao{
+            margin: 0 auto;
+            width: 100px;
+            border-radius: 25px;
+            font-size: 18px;
+            margin-top: 15px;
+
+        }
+
+        .botao:hover{
+        
+            background-color: rgb(153, 149, 149);
+        }
+
+        /* Tabela */
+
+        .subtitulo-container{
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        .subtitulo{
+            text-align: center;
+            margin-top: 55px;
+        }
+
+        .icone-seta{
+            width: 40px;
+            margin: auto;
+            margin-bottom: 30px;
+            
+        }
+
+        
+
+        /* Celulares */
+
+        @media (max-width: 600px) {
+            #container{
+            margin-top: 40px;
+            width: 300px;
+            height: 350px;
+            }
+            #container label{
+            font-size: 22px;
+        }
+        .subtitulo{
+            margin-top: 20px;
+        }
+
+    }
+        
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Calcule aqui o seu IMC:</h1>
+
+     <div id="container">
+        <div id="resp"></div>
+
+        <label>Qual é o seu peso? (ex: 75)</label>
+        <input type="number" id="num_1">
+
+        <label>Qual é a sua altura? (ex: 1.80)</label>
+        <input type="number" id="num_2">
+
+
+        <button  class="botao" onclick="calcular()">Calcular IMC</button>
+    </div>
+
+    <div class="subtitulo-container">
+    <h2 class="subtitulo">Veja a tabela a seguir e entenda o seu IMC</h2>
+    <img src="img/icons8-duplo-para-baixo-50.png" class="icone-seta">
+    <img src="img/Tabela IMC.png" alt="">
+    </div>
+   
+
+    
+</body>
+</html>
