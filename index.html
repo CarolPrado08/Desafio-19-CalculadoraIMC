@@ -27,8 +27,14 @@
 
     <style>
         body{
-            background-image: url(img/8423417.jpg);
+            background-image: url(img/bg.jpg);
             font-family: 'Cardo', serif;
+        }
+
+        h1{
+            text-align: center;
+            margin-bottom: 5px;
+            margin-top: 30px;
         }
 
         #resp{
@@ -48,19 +54,19 @@
             justify-content: space-evenly;
             text-align: center;
             border-radius: 25px;
-            border: 3px solid black;
+            border: 2px solid black;
             margin: auto;
-            margin-top: 200px;
-            width: 400px;
+            margin-top: 40px;
+            width: 420px;
             height: 350px;
             padding-top: 45px ;
-            background-color: rgb(100, 21, 116);
+            background-color: rgb(195, 138, 206);
         }
 
         #container label{
 
             font-size: 35px;
-            color: #fff;
+            color: #000000;
         }
 
         input{
@@ -74,13 +80,63 @@
             width: 100px;
             border-radius: 25px;
             font-size: 18px;
+            margin-top: 15px;
 
         }
+
+        .botao:hover{
+        
+            background-color: rgb(153, 149, 149);
+        }
+
+        /* Tabela */
+
+        .subtitulo-container{
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        .subtitulo{
+            text-align: center;
+            margin-top: 55px;
+        }
+
+        .icone-seta{
+            width: 40px;
+            margin: auto;
+            margin-bottom: 30px;
+            
+        }
+
+        
+
+        /* Celulares */
+
+        @media (max-width: 600px) {
+            #container{
+            margin-top: 40px;
+            width: 300px;
+            height: 350px;
+            }
+            #container label{
+            font-size: 22px;
+        }
+        .subtitulo{
+            margin-top: 20px;
+        }
+
+    }
+        
 
     </style>
 
 </head>
 <body>
+
+    <h1>Calcule aqui o seu IMC:</h1>
+
      <div id="container">
         <div id="resp"></div>
 
@@ -94,6 +150,11 @@
         <button  class="botao" onclick="calcular()">Calcular IMC</button>
     </div>
 
+    <div class="subtitulo-container">
+    <h2 class="subtitulo">Veja a tabela a seguir e entenda o seu IMC</h2>
+    <img src="img/icons8-duplo-para-baixo-50.png" class="icone-seta">
+    <img src="img/Tabela IMC.png" alt="">
+    </div>
    
 
     
